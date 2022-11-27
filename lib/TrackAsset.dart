@@ -40,12 +40,7 @@ class TrackAsset extends StatelessWidget {
                         horizontal: 20.0, vertical: 10.0),
                     child: GestureDetector(
                       onTap: () {
-                        //Navigator.push(
-                        //context,
-                        //MaterialPageRoute(
-                        //builder: (context) => HomePage()));
-                        //scanBarcode();
-
+              
                         try {
                           FlutterBarcodeScanner.scanBarcode(
                                   "#2A99CF", "Cancel", true, ScanMode.QR)
@@ -53,9 +48,8 @@ class TrackAsset extends StatelessWidget {
                             barcode = value;
                             bCodeValue..text = barcode;
                             if (listModel.checkIfAssetExists(barcode) == true) {
-                              trackMessage = "asset exists";
                             } else {
-                              trackMessage = "ASSET EXIST";
+                              trackMessage = "The Product Exists ";
                             }
                             showDialog(
                               context: context,

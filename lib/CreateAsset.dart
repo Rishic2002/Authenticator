@@ -103,7 +103,7 @@ class CreateAsset extends StatelessWidget {
                         } else {
                           try {
                             listModel.addAsset(barcode, name.text);
-                            trackMessage = "asset created";
+                            trackMessage = "The Product is Successfully Added";
                           } catch (e) {
                             trackMessage = "ERROR REGISTERING THE ASSET!";
                           }
@@ -113,7 +113,7 @@ class CreateAsset extends StatelessWidget {
                         showDialog(
                           context: context,
                           builder: (context) => new AlertDialog(
-                            title: new Text('Message'),
+                            title: new Text('Alert'),
                             content: Text(trackMessage),
                             actions: <Widget>[
                               Center(

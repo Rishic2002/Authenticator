@@ -6,6 +6,8 @@ import 'AssetsList.dart';
 
 import 'package:dsc_dapp/AssetsModel.dart';
 
+import 'wave.dart';
+
 void main() => runApp(DSC());
 
 class DSC extends StatelessWidget {
@@ -14,14 +16,15 @@ class DSC extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => AssetsModel(),
       child: MaterialApp(
-        title: 'AuthenticMax',
+        
+        title: 'Authify',
         debugShowCheckedModeBanner: true,
-        // Set Raleway as the default app font
         theme: ThemeData(
+          
           fontFamily: 'Candara',
         ),
 
-        home: MyHomePage(),
+        home: MyHomePage() 
       ),
     );
   }
@@ -31,14 +34,14 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: Center(
+          body: Stack(children: <Widget>[
+          wave(),Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Stack(
+            Stack(
               alignment: Alignment.center,
-              children: <Widget>[
-                
+              children: <Widget>[ 
                 new Container(
                   margin: new EdgeInsets.only(right: 50.0, top: 50.0),
                   height: 60.0,
@@ -59,7 +62,7 @@ class MyHomePage extends StatelessWidget {
                       borderRadius: new BorderRadius.circular(50.0),
                       color: Color(0xFFFFCE56)),
                   child: new Icon(
-                    Icons.attach_money,
+                    Icons.currency_rupee,
                     color: Colors.white,
                   ),
                 ),
@@ -74,7 +77,7 @@ class MyHomePage extends StatelessWidget {
                     Icons.check,
                     color: Colors.white,
                   ),
-                )
+                ),
               ],
             ),
             new Row(
@@ -115,35 +118,6 @@ class MyHomePage extends StatelessWidget {
                                   fontSize: 16.0, color: Colors.white))),
                     ),
                   ),
-                )
-              ],
-            ),
-            new Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 10.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AssetsList(),
-                            ));
-                      },
-                      child: new Container(
-                          alignment: Alignment.center,
-                          height: 40.0,
-                          decoration: new BoxDecoration(
-                              color: Color(0xFF4364A1),
-                              borderRadius: new BorderRadius.circular(9.0)),
-                          child: new Text("View Assets",
-                              style: new TextStyle(
-                                  fontSize: 16.0, color: Colors.white))),
-                    ),
-                  ),
                 ),
                 Expanded(
                   child: Padding(
@@ -171,9 +145,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ],
             )
-          ],
-        ),
-      ),
-    );
-  }
+          
+        ]),
+ )])); }
 }
