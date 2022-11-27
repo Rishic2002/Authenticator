@@ -55,7 +55,7 @@ class TrackAsset extends StatelessWidget {
                             if (listModel.checkIfAssetExists(barcode) == true) {
                               trackMessage = "asset exists";
                             } else {
-                              trackMessage = "ERROR: ASSET DOES NOT EXIST";
+                              trackMessage = "ASSET EXIST";
                             }
                             showDialog(
                               context: context,
@@ -65,7 +65,7 @@ class TrackAsset extends StatelessWidget {
                                 actions: <Widget>[
                                   Center(
                                     // ignore: deprecated_member_use
-                                    child: new ElevatedButton(
+                                    child: ElevatedButton(
                                       onPressed: () {
                                         Navigator.of(context,
                                                 rootNavigator: true)

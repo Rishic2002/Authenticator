@@ -1,0 +1,4 @@
+#Sat Nov 26 17:45:25 IST 2022
+base.0=/Users/rishic2002/Desktop/AuthenticMax-136ce0db2045244e8cf9205b0621ed5ad5d55d86 2/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

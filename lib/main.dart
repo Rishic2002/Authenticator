@@ -1,8 +1,5 @@
-import 'package:dsc_dapp/Wave.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wave/config.dart';
-import 'package:wave/wave.dart';
 import 'CreateAsset.dart';
 import 'TrackAsset.dart';
 import 'AssetsList.dart';
@@ -15,14 +12,18 @@ class DSC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create: (context) => AssetsModel(),
-        child: MaterialApp(
-            title: 'Authenticator',
-            debugShowCheckedModeBanner: true,
-            theme: ThemeData(
-              fontFamily: 'Candara',
-            ),
-            home: MyHomePage()));
+      create: (context) => AssetsModel(),
+      child: MaterialApp(
+        title: 'AuthenticMax',
+        debugShowCheckedModeBanner: true,
+        // Set Raleway as the default app font
+        theme: ThemeData(
+          fontFamily: 'Candara',
+        ),
+
+        home: MyHomePage(),
+      ),
+    );
   }
 }
 
@@ -37,8 +38,9 @@ class MyHomePage extends StatelessWidget {
             new Stack(
               alignment: Alignment.center,
               children: <Widget>[
+                
                 new Container(
-                  margin: new EdgeInsets.only(right: 50, top: 50.0),
+                  margin: new EdgeInsets.only(right: 50.0, top: 50.0),
                   height: 60.0,
                   width: 60.0,
                   decoration: new BoxDecoration(
@@ -50,19 +52,19 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  margin: new EdgeInsets.only(left: 50.0, top: 50.0),
+                  margin: new EdgeInsets.only(left: 30.0, top: 50.0),
                   height: 60.0,
                   width: 60.0,
                   decoration: new BoxDecoration(
                       borderRadius: new BorderRadius.circular(50.0),
                       color: Color(0xFFFFCE56)),
                   child: new Icon(
-                    Icons.currency_rupee,
+                    Icons.attach_money,
                     color: Colors.white,
                   ),
                 ),
                 new Container(
-                  margin: new EdgeInsets.only(left: 150.0, top: 50.0),
+                  margin: new EdgeInsets.only(left: 100.0, top: 50.0),
                   height: 60.0,
                   width: 60.0,
                   decoration: new BoxDecoration(
@@ -81,7 +83,7 @@ class MyHomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0, bottom: 80.0),
                   child: new Text(
-                    "Authenticator",
+                    "Authify",
                     style: new TextStyle(fontSize: 30.0),
                   ),
                 )

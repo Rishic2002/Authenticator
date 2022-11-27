@@ -2,13 +2,14 @@ import 'package:dsc_dapp/AssetsModel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(AssetsList());
+
 
 class AssetsList extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Authentic',
+      title: 'IsAUTHENTIC',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -48,6 +49,10 @@ class _DemAssets extends State<DemAssets> {
   Widget build(BuildContext context) {
     var listModel = Provider.of<AssetsModel>(context);
     return Scaffold(
+      appBar: AppBar(
+        title: Text("IsAuthentic"),
+        centerTitle: true,
+      ),
       body: listModel.isLoading
           ? Center(
               child: CircularProgressIndicator(),

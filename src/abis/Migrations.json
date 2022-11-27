@@ -53,7 +53,7 @@
   "sourceMap": "66:352:1:-;;;113:10;90:33;;;;;;;;;;;;;;;;;;;;66:352;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:1;;;;;;;",
   "deployedSourceMap": "66:352:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;90:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;313:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;313:103:1;;;;;;;;;;;;;;;;;:::i;:::-;;127:36;;;;:::o;90:33::-;;;;;;;;;;;;;:::o;313:103::-;225:5;;;;;;;;;;;211:19;;:10;:19;;;196:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;402:9;375:24;:36;;;;313:103;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/Users/rishic2002/Downloads/AuthenticMax-136ce0db2045244e8cf9205b0621ed5ad5d55d86/contracts/Migrations.sol",
+  "sourcePath": "/Users/rishic2002/Desktop/AuthenticMax-136ce0db2045244e8cf9205b0621ed5ad5d55d86 2/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -915,12 +915,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xCe735C77242D6f757C9F6012B1ca904AA21eBa4B",
-      "transactionHash": "0x8c49f322e6feecfbf3fa91af650a4f7ab0bfc4616883a12d6d2789b7a0606a9e"
+      "address": "0x99cFE0d59312604fCa19587BAe9E8895E56bE850",
+      "transactionHash": "0x13c8b98f476906d7f97ac4428fe9a8235eb6612bff9f6ef529b7da392854e8a0"
     }
   },
-  "schemaVersion": "3.4.10",
-  "updatedAt": "2022-11-19T10:34:18.509Z",
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-11-26T12:13:36.544Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

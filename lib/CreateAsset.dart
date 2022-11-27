@@ -118,7 +118,7 @@ class CreateAsset extends StatelessWidget {
                             actions: <Widget>[
                               Center(
                                 // ignore: deprecated_member_use
-                                child: new ElevatedButton(
+                                child: ElevatedButton(
                                   onPressed: () {
                                     Navigator.of(context, rootNavigator: true)
                                         .pop(); // dismisses only the dialog and returns nothing

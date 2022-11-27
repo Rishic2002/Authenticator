@@ -63,11 +63,11 @@ class AssetsModel extends ChangeNotifier {
     _createAsset = _contract.function("createAsset");
     _assets = _contract.function("assets");
     _AssetCreatedEvent = _contract.event("AssetCreated");
-    getTodos();
+    getTodo();
     // print("");
   }
 
-  getTodos() async {
+    getTodo() async {
     List totalAssetsList = await _client
         .call(contract: _contract, function: _assetCount, params: []);
     BigInt totalAssets = totalAssetsList[0];
@@ -80,7 +80,7 @@ class AssetsModel extends ChangeNotifier {
           contract: _contract, function: _assets, params: [BigInt.from(i)]);
       assets.add(Asset(assetCode: temp[0], assetName: temp[1]));
     }
-    //print(todos[0].assetCode + " " + todos[0].taskName + " " + todos[0].theDate);
+    //print(todo[0].assetCode + " " + todo[0].taskName + " " + todo[0].theDate);
     //checkIfAssetExists("voke");
     isLoading = false;
     notifyListeners();
@@ -107,7 +107,7 @@ class AssetsModel extends ChangeNotifier {
             contract: _contract,
             function: _createAsset,
             parameters: [assetCodeData, taskNameData]));
-    getTodos();
+    getTodo();
   }
 }
 

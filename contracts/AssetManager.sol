@@ -16,7 +16,7 @@ contract AssetManager {
         uint assetNumber
     );
 
-    constructor () public {
+    constructor() public{
         assets[0] = Asset("test_code", "test");
         assetCount = 1;
     }
